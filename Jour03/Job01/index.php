@@ -19,7 +19,7 @@
         <p>Ensuite créez un <strong>bouton</strong> qui servira à cacher tout l’élément <strong>html</strong>.</p>
 
         <h2>Code</h2>
-        <h3>Version "Vanilla"</h3>
+        <h3>Version "jquery"</h3>
 
         <button id="affiche">Afficher</button>
 
@@ -32,7 +32,7 @@
 
     </footer>
 </body>
-<!-- <script src=https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
 <script src="script.js"></script>
 
