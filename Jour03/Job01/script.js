@@ -9,14 +9,14 @@
 //     $("#affiche").hide();
 // }
 
-affiche.addEventListener("click", function() {
-    article.style.display = "block";
-    efface.style.display = "block";
-    affiche.style.display = "none";
+$("#affiche").click(function() {
+    $("#article").show();
+    $("#efface").show();
+    $("#affiche").hide();
 })
 
-efface.addEventListener("click", function() {
-    article.style.display = "none";
-    efface.style.display = "none";
-    affiche.style.display = "block";
-})
+$("#efface").click(function() {
+    $("#article").hide();
+    $("#efface").hide();
+    $("#affiche").show();
+});
