@@ -1,0 +1,35 @@
+canvas {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#board {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 1px solid black;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tile:hover {
+  background-color: lightgray;
+}
+
+#message {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#restartButton {
+  margin-top: 10px;
+}
