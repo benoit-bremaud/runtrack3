@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Inclure Tailwind CSS -->
+  <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-violet-900 to-violet-200 text-white">
+    <header class="bg-purple-600 text-white p-4 flex items-center justify-between">
+        <!-- Menu burger pour le header -->
+        <button class="md:hidden focus:outline-none" id="headerMenuToggle">
+        <img src="chemin/vers/icon-burger.svg" alt="Menu Burger" class="w-6 h-6">
+        </button>
+        <nav class="hidden md:flex space-x-4">
+        <ul class="flex space-x-4">
+            <li><a href="#accueil" class="hover:text-yellow-300 hover:cursor-pointer transition">Accueil</a></li>
+            <li><a href="#inscription" class="hover:text-yellow-300 hover:cursor-pointer transition">Inscription</a></li>
+            <li><a href="#connexion" class="hover:text-yellow-300 hover:cursor-pointer transition">Connexion</a></li>
+            <li><a href="#rechercher" class="hover:text-yellow-300 hover:cursor-pointer transition">Rechercher</a></li>
+        </ul>
+        </nav>
+        <h1 class="text-3xl font-bold underline hover:bg-purple-700">
+        Hello assHole!
+        </h1>
+    </header>
+  <!-- Menu burger pour le header -->
+    <div class="hidden md:hidden" id="headerMobileMenu">
+        <nav class="bg-purple-600 text-white p-4">
+        <ul class="space-y-4">
+            <li><a href="#accueil" class="block hover:text-yellow-300">Accueil</a></li>
+            <li><a href="#inscription" class="block hover:text-yellow-300">Inscription</a></li>
+            <li><a href="#connexion" class="block hover:text-yellow-300">Connexion</a></li>
+            <li><a href="#rechercher" class="block hover:text-yellow-300">Rechercher</a></li>
+        </ul>
+        </nav>
+    </div>
+    <main>
+        <section class="container mx-auto p-4">
+            <h2 class="text-2xl font-bold mb-4">Créer un compte</h2>
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <!-- Civilité -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Civilité :</label>
+                    <div class="inline-flex space-x-4">
+                        <label class="flex items-center">
+                            <input type="radio" name="civilite" value="M." class="form-radio">
+                            <img src="chemin/vers/icon-monsieur.svg" alt="Monsieur" class="w-5 h-5 ml-2">
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="civilite" value="Mme." class="form-radio">
+                            <img src="chemin/vers/icon-madame.svg" alt="Madame" class="w-5 h-5 ml-2">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Prénom -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="prenom">Prénom :</label>
+                    <div class="relative">
+                        <img src="chemin/vers/icon-prenom.svg" alt="Prénom" class="w-5 h-5 text-gray-500 absolute left-3 top-3">
+                        <input class="form-input py-2 pl-10 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" id="prenom" name="prenom" type="text" placeholder="Prénom">
+                    </div>
+                </div>
+
+                <!-- Nom -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nom">Nom :</label>
+                    <div class="relative">
+                        <img src="chemin/vers/icon-nom.svg" alt="Nom" class="w-5 h-5 text-gray-500 absolute left-3 top-3">
+                        <input class="form-input py-2 pl-10 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" id="nom" name="nom" type="text" placeholder="Nom">
+                    </div>
+                </div>
+
+                <!-- Adresse -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="adresse">Adresse :</label>
+                    <div class="relative">
+                        <img src="chemin/vers/icon-adresse.svg" alt="Adresse" class="w-5 h-5 text-gray-500 absolute left-3 top-3">
+                        <input class="form-input py-2 pl-10 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" id="adresse" name="adresse" type="text" placeholder="Adresse">
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email :</label>
+                    <div class="relative">
+                        <img src="chemin/vers/icon-email.svg" alt="Email" class="w-5 h-5 text-gray-500 absolute left-3 top-3">
+                        <input class="form-input py-2 pl-10 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" id="email" name="email" type="email" placeholder="Email">
+                    </div>
+                </div>
+
+                <!-- Mot de passe -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Mot de passe :</label>
+                    <div class="relative">
+                        <img src="chemin/vers/icon-password.svg" alt="Mot de passe" class="w-5 h-5 text-gray-500 absolute left-3 top-3">
+                        <input class="form-input py-2 pl-10 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" id="password" name="password" type="password" placeholder="Mot de passe">
+                    </div>
+                </div>
+
+                <!-- Validation du mot de passe -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password_confirm">Confirmer le mot de passe :</label>
+                    <div class="relative">
+                        <img src="chemin/vers/icon-password.svg" alt="Confirmer le mot de passe" class="w-5 h-5 text-gray-500 absolute left-3 top-3">
+                        <input class="form-input py-2 pl-10 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" id="password_confirm" name="password_confirm" type="password" placeholder="Confirmer le mot de passe">
+                    </div>
+                </div>
+
+                <!-- Passions -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Passions :</label>
+                    <div class="flex space-x-4">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="passions" value="informatique" class="form-checkbox">
+                            <img src="chemin/vers/icon-informatique.svg" alt="Informatique" class="w-5 h-5 ml-2">
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="passions" value="voyages" class="form-checkbox">
+                            <img src="chemin/vers/icon-voyages.svg" alt="Voyages" class="w-5 h-5 ml-2">
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="passions" value="sport" class="form-checkbox">
+                            <img src="chemin/vers/icon-sport.svg" alt="Sport" class="w-5 h-5 ml-2">
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="passions" value="lecture" class="form-checkbox">
+                            <img src="chemin/vers/icon-lecture.svg" alt="Lecture" class="w-5 h-5 ml-2">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Bouton de validation -->
+                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Valider</button>
+            </form>
+        </section>
+    </main>
+    <footer class="bg-purple-600 p-4 text-white text-center md:flex md:justify-center md:space-x-8">
+        <!-- Menu burger pour le footer -->
+        <button class="md:hidden focus:outline-none" id="footerMenuToggle">
+            <img src="chemin/vers/icon-burger.svg" alt="Menu Burger" class="w-6 h-6">
+        </button>
+        <div class="hidden md:flex justify-between">
+            <ul class="list-none space-x-4">
+                <li><a href="index.php" class="text-white hover:text-yellow-300 hover:cursor-pointer transition">Accueil</a></li>
+                <li><a href="index.php" class="text-white hover:text-yellow-300 hover:cursor-pointer transition">Inscription</a></li>
+                <li><a href="index.php" class="text-white hover:text-yellow-300 hover:cursor-pointer transition">Connexion</a></li>
+                <li><a href="index.php" class="text-white hover:text-yellow-300 hover:cursor-pointer transition">Rechercher</a></li>
+            </ul>
+        </div>
+        <!-- Menu burger pour le footer -->
+        <div class="hidden md:hidden space-y-reverse" id="footerMobileMenu">
+            <nav class="bg-purple-600 text-white p-4">
+                <ul class="space-y-4">
+                    <li><a href="index.php" class="block hover:text-yellow-300">Accueil</a></li>
+                    <li><a href="index.php" class="block hover:text-yellow-300">Inscription</a></li>
+                    <li><a href="index.php" class="block hover:text-yellow-300">Connexion</a></li>
+                    <li><a href="index.php" class="block hover:text-yellow-300">Rechercher</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script>
+        // JavaScript pour gérer le menu burger du header
+        const headerMenuToggle = document.getElementById('headerMenuToggle');
+        const headerMobileMenu = document.getElementById('headerMobileMenu');
+
+        headerMenuToggle.addEventListener('click', () => {
+        headerMobileMenu.classList.toggle('hidden');
+        });
+
+        // JavaScript pour gérer le menu burger du footer
+        const footerMenuToggle = document.getElementById('footerMenuToggle');
+        const footerMobileMenu = document.getElementById('footerMobileMenu');
+
+        footerMenuToggle.addEventListener('click', () => {
+        footerMobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
